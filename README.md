@@ -6,7 +6,7 @@
     <a href="https://www.python.org/" alt="made-with-python"> <img src="https://img.shields.io/badge/Made%20with-Python-black.svg?style=flat-square&logo=python&logoColor=blue&color=red" /></a>
     <a href="https://github.com/saifalisew1508/MissCutie/graphs/commit-activity" alt="Maintenance"> <img src="https://img.shields.io/badge/Maintained%3F-yes-red.svg?style=flat-square" /></a>
     <a href="https://github.com/saifalisew1508/MissCutie"> <img src="https://img.shields.io/github/repo-size/saifalisew1508/MissCutie?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
-    <a href="https://github.com/saifalisew1508/MissCutie/commits/main"> <img src="https://img.shields.io/github/last-commit/MissCutie/MissCutie?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
+    <a href="https://github.com/saifalisew1508/MissCutie/commits/main"> <img src="https://img.shields.io/github/last-commit/saifalisew1508/MissCutie?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
     <a href="https://github.com/saifalisew1508/MissCutie/issues"> <img src="https://img.shields.io/github/issues/saifalisew1508/MissCutie?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
     <a href="https://github.com/saifalisew1508/MissCutie/network/members"> <img src="https://img.shields.io/github/forks/saifalisew1508/MissCutie?color=red&logo=github&logoColor=blue&style=flat-square" /></a>  
     <a href="https://github.com/saifalisew1508/MissCutie/network/members"> <img src="https://img.shields.io/github/stars/saifalisew1508/MissCutie?color=red&logo=github&logoColor=blue&style=flat-square" /></a>  
