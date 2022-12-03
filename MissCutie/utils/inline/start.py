@@ -17,20 +17,20 @@ def start_pannel(_):
                 text="📚 All Commands", callback_data="settings_back_helper"
             ),
             InlineKeyboardButton(
-                text="Dev", url="https://t.me/Xd_Nitric"
+                text="Dev", url="https://t.me/saifalisew1508"
             ),                                   
         ],
         [
             InlineKeyboardButton(
-                text="Updates", url="https://t.me/StormUpdates"
+                text="Updates", url="https://t.me/MissCutieUpdates"
             ),
             InlineKeyboardButton(
-                text="Support", url="https://t.me/StormSupportChat"
+                text="Support", url="https://t.me/CollegeWaliMasti"
             ),                       
         ],        
         [
             InlineKeyboardButton(
-                text="🔗 Deploy your own bot", url="https://github.com/MissCutie/MissCutie"
+                text="🔗 Deploy your own bot", url="https://github.com/saifalisew1508/MissCutie"
             ),                                  
         ]
     ]
@@ -51,9 +51,9 @@ def private_panel(_, BOT_USERNAME):
             ),
         ],
         [
-            InlineKeyboardButton(text="Updates", url=f"https://t.me/StormUpdates"),
+            InlineKeyboardButton(text="Updates", url=f"https://t.me/MissCutieUpdates"),
             InlineKeyboardButton(
-                text="Support", url=f"https://t.me/StormSupportChat"
+                text="Support", url=f"https://t.me/CollegeWaliMasti"
             ),
         ],
         [
@@ -63,7 +63,7 @@ def private_panel(_, BOT_USERNAME):
         ],
         [
             InlineKeyboardButton(
-                text="🔗 Deploy your own bot", url="https://github.com/MissCutie/MissCutie"
+                text="🔗 Deploy your own bot", url="https://github.com/saifalisew1508/MissCutie"
             )
         ]
      ]
