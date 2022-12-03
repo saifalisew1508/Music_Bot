@@ -13,7 +13,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import MUSIC_BOT_NAME as BOT_NAME
 
 BOT_USERNAME = app.username
-START_TEXT = f"""**Hello, MENTION !!\n\nThis is Storm Beatz Bot.\n\nA Powerfull music player bot with some awesome and usefull features.\n\nAll of my commands are listed in help button or You can find by /help.**
+START_TEXT = f"""**Hello, MENTION !!\n\nThis is Miss Cutie Bot.\n\nA Powerfull music player bot with some awesome and usefull features.\n\nAll of my commands are listed in help button or You can find by /help.**
 """
 
 COMMANDS_TEXT = f"""
@@ -302,7 +302,7 @@ COMMAND_MENU_BUTTON = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                "Support", url=f"https://t.me/StormSupportChat"
+                "Support", url=f"https://t.me/COLLEGEWALIMASTI"
             ),
         ],
         [
