@@ -69,7 +69,7 @@ The easy way to host this bot, deploy to Heroku, Change the app country to Europ
 saifalisew1508@MacBook~ $ git clone https://github.com/saifalisew1508/MissCutie
 saifalisew1508@MacBook~ $ cd MissCutie
 saifalisew1508@MacBook~ $ ls
-Misssaifalisew1508Cutie@MacBook~ $ pip3 install -U -r requirements.txt
+saifalisew1508@MacBook~ $ pip3 install -U -r requirements.txt
 saifalisew1508@MacBook~ $ sudo bash setup
 ```
 > Setup will install each and every requirement, nodejs and pip packages automatically. After successfull installation of requirements , setup will ask you to input your vars.
