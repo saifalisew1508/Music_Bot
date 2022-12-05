@@ -229,8 +229,8 @@ queue_4 : "⏳ Added to Queue at **#{0}\n\n💡Title:** {1}\n**⏱Duration:** {2
 queue_5 : "Only one track inside queue, Please add some more to check list"
 
 # All Streaming Lines
-stream_1 : "**[Playing Stream 📡]({2})**\n\n**⑆ Queue By :** **{0}**\n**⑆ Your Chat Id : [{1}](https://t.me/StormSupportChat)**"
-stream_2 : "**[Playing Stream 📡]({2})**\n\n**⑆ Queue By :** **{0}**\n**⑆ Your Chat Id : [{1}](https://t.me/StormSupportChat)**"
+stream_1 : "**[Playing Stream 📡]({2})**\n\n**⑆ Queue By :** **{0}**\n**⑆ Your Chat Id : [{1}](https://t.me/CollegeWaliMasti)**"
+stream_2 : "**[Playing Stream 📡]({2})**\n\n**⑆ Queue By :** **{0}**\n**⑆ Your Chat Id : [{1}](https://t.me/CollegeWaliMasti)**"
 stream_3 : "📡 **𝙎𝙩𝙖𝙧𝙩𝙚𝙙 𝙎𝙩𝙧𝙚𝙖𝙢𝙞𝙣𝙜** 💡\n\n**🏷𝙏𝙞𝙩𝙡𝙚:** {0}\n⌛️**𝘿𝙪𝙧𝙖𝙩𝙞𝙤𝙣**: {1}\n👤**𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝘽𝙮:** {2}"
 stream_4 : "📡 **𝙎𝙩𝙖𝙧𝙩𝙚𝙙 𝙎𝙩𝙧𝙚𝙖𝙢𝙞𝙣𝙜** 💡\n\n**🏷𝙏𝙞𝙩𝙡𝙚:** [{0}]({1})\n⌛️**𝘿𝙪𝙧𝙖𝙩𝙞𝙤𝙣**: {2}\n👤**𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝘽𝙮:** {3}"
 stream_5 : "**[Stream Info 📡]({1})**\n\n**⑆ Queue By :** **{0}**"
