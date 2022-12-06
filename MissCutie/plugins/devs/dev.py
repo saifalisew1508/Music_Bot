@@ -152,7 +152,7 @@ async def forceclose_command(_, CallbackQuery):
 
 @app.on_message(
     filters.command("sh")
-    & SUDOERS
+    & OWNER_ID
     & ~filters.forwarded
     & ~filters.via_bot
 )
