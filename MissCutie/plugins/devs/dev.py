@@ -25,7 +25,7 @@ from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 
 from MissCutie import app
-from MissCutie.misc import SUDOERS
+from MissCutie.misc import OWNER
 
 
 async def aexec(code, client, message):
