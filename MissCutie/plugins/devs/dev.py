@@ -25,7 +25,7 @@ from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 
 from MissCutie import app
-from MissCutie.misc import OWNER
+from config import OWNER_ID
 
 
 async def aexec(code, client, message):
@@ -44,7 +44,7 @@ async def edit_or_reply(msg: Message, **kwargs):
 
 @app.on_message(
     filters.command("eval")
-    & OWNER
+    & OWNER_ID
     & ~filters.forwarded
     & ~filters.via_bot
 )
