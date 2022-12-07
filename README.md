@@ -1,4 +1,4 @@
-<p align="center"><a href="https://t.me/MissCutie_Bot/"><img src="https://telegra.ph/file/d5b9b6007bfdce0de5ab5.jpg"></a></p>
+<p align="center"><a href="https://t.me/MissCutie_Bot/"><img src="https://te.legra.ph/file/bd86d7496c4d0ce62a123.jpg"></a></p>
 <p align="center">
     <br><b>MissCutie Music is a telegram bot project that's allow you to play music on telegram voice chat group</b><br>
 </p>
@@ -86,7 +86,7 @@ saifalisew1508@MacBook~ $ bash start
 ```
 
 ### Special Credits 💖
-- [</StormBeatz>](https://github.com/StormBeatz): Main Source
+- [StormBeatz](https://github.com/StormBeatz): Main Source
 - [𝗧𝗲𝗮𝗺 𝗫 𝗖𝗼𝗱𝗲](https://t.me/TheXCodeTeam) Our Bot Team
 - [𝗥𝗼𝗷𝗦𝗲𝗿𝗕𝗲𝘀𝘁](https://github.com/rojserbest) CallsMusic Developer
 
