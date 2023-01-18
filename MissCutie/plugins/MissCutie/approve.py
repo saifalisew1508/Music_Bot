@@ -25,9 +25,7 @@ async def userapprove(client, message: Message, _):
             user = user.replace("@", "")
         user = await app.get_users(user)
         if await is_approved(user.id):
-            return await message.reply_text(
-                "{} is already approved".format(user.mention)
-            )
+            return await message.reply_text(f"{user.mention} is already approved")
         added = await add_to_approved_user(user.id)
         if added:            
             await message.reply_text("Added **{0}** to Approved Users.".format(user.mention))
@@ -36,9 +34,7 @@ async def userapprove(client, message: Message, _):
         return
     if await is_approved(message.reply_to_message.from_user.id):
         return await message.reply_text(
-            "{} is already approved".format(
-                message.reply_to_message.from_user.mention
-            )
+            f"{message.reply_to_message.from_user.mention} is already approved"
         )
     added = await add_to_approved_user(message.reply_to_message.from_user.id)
     if added:
@@ -69,29 +65,27 @@ async def userunapprove(client, message: Message, _):
             user = user.replace("@", "")
         user = await app.get_users(user)
         if await is_approved(user.id):
-            return await message.reply_text("{} is not approved".format(
-                message.from_user.mention
-            ))
+            return await message.reply_text(f"{message.from_user.mention} is not approved")
         removed = await remove_approved_user(user.id)
         if removed:
             await message.reply_text("Removed **{0}** to From Approved Users".format(
                 message.from_user.mention
             ))
             return
-        await message.reply_text(f"Something wrong happened.")
+        await message.reply_text("Something wrong happened.")
         return
     user_id = message.reply_to_message.from_user.id
     if await is_approved(user_id):
-        return await message.reply_text("{} is not approved".format(
-                message.reply_to_message.from_user.mention
-            ))
+        return await message.reply_text(
+            f"{message.reply_to_message.from_user.mention} is not approved"
+        )
     removed = await remove_approved_user(user_id)
     if removed:
         await message.reply_text("Removed **{0}** to From Approved Users".format(
                 message.reply_to_message.from_user.mention
             ))
         return
-    await message.reply_text(f"Something wrong happened.")
+    await message.reply_text("Something wrong happened.")
 
 
 @app.on_message(filters.command("approved") & filters.user(SUDOERS))
@@ -101,21 +95,16 @@ async def approved_list(client, message: Message, _):
     smex = 0
     text = ""
     for user_id in await get_approved_users():
-        if 1 == 1:
-            try:
-                user = await app.get_users(user_id)
-                user = (
-                    user.first_name
-                    if not user.mention
-                    else user.mention
-                )
-                if smex == 0:
-                    smex += 1
-                    text += "\n⭐️<u> **Approved Users:**</u>\n"
-                count += 1
-                text += f"{count}➤ {user}\n"
-            except Exception:
-                continue
+        try:
+            user = await app.get_users(user_id)
+            user = user.mention or user.first_name
+            if smex == 0:
+                smex += 1
+                text += "\n⭐️<u> **Approved Users:**</u>\n"
+            count += 1
+            text += f"{count}➤ {user}\n"
+        except Exception:
+            continue
     if not text:
         await message.reply_text("No Approved Users")
     else:

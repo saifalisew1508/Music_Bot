@@ -54,7 +54,7 @@ async def init():
         pass
     await app.start()
     for all_module in ALL_MODULES:
-        importlib.import_module("MissCutie.plugins" + all_module)
+        importlib.import_module(f"MissCutie.plugins{all_module}")
     LOGGER("MissCutie.plugins").info(
         "Successfully Imported Modules "
     )

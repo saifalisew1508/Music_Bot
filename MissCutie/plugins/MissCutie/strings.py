@@ -16,7 +16,7 @@ BOT_USERNAME = app.username
 START_TEXT = f"""**Hello, MENTION !!\n\nThis is Miss Cutie Bot.\n\nA Powerfull music player bot with some awesome and usefull features.\n\nAll of my commands are listed in help button or You can find by /help.**
 """
 
-COMMANDS_TEXT = f"""
+COMMANDS_TEXT = """
 ✨ **Hello MENTION !**
 **Click on the buttons below to know my commands.**
 """
@@ -48,45 +48,24 @@ START_BUTTON_GROUP = InlineKeyboardMarkup(
 )
 
 START_BUTTON_PRIVATE = InlineKeyboardMarkup(
-    [   [
+    [
+        [
             InlineKeyboardButton(
-
-                        "Add me to your group ➕",
-
-                        url=f"https://t.me/MissCutie_bot?startgroup=true",
-
-                    )
-
-                ],
-
-                [InlineKeyboardButton("Help", callback_data="settings_back_helper")],
-
-                
-
-
-
-
-
-
-
-                [
-
-                    InlineKeyboardButton(
-
-                        "Updates", url=f"https://t.me/MissCutieUpdates"
-
-                    ),
-
-                    InlineKeyboardButton(
-
-                        "Support", url=f"https://t.me/COLLEGEWALIMASTI"
-
-                    ),
-
-                ],
-                [
-                 InlineKeyboardButton("🏳️‍🌈 Language", callback_data="LG"
+                "Add me to your group ➕",
+                url="https://t.me/MissCutie_bot?startgroup=true",
+            )
+        ],
+        [InlineKeyboardButton("Help", callback_data="settings_back_helper")],
+        [
+            InlineKeyboardButton(
+                "Updates", url="https://t.me/MissCutieUpdates"
             ),
+            InlineKeyboardButton(
+                "Support", url="https://t.me/COLLEGEWALIMASTI"
+            ),
+        ],
+        [
+            InlineKeyboardButton("🏳️‍🌈 Language", callback_data="LG"),
         ],
     ]
 )
@@ -182,7 +161,7 @@ SUDO_BACK_BUTTON = InlineKeyboardMarkup(
 )
 
 
-ADMIN_TEXT = f"""
+ADMIN_TEXT = """
 ✅ Admin Commands:
 
 c stands for channel play.
@@ -295,23 +274,18 @@ ADMIN_BACK_BUTTON = InlineKeyboardMarkup(
 )
 
 COMMAND_MENU_BUTTON = InlineKeyboardMarkup(
-    [   [
-            InlineKeyboardButton(
-                text="Help", callback_data="settings_back_helper"
-            ),                                   
-        ],
+    [
         [
             InlineKeyboardButton(
-                "Support", url=f"https://t.me/COLLEGEWALIMASTI"
+                text="Help", callback_data="settings_back_helper"
             ),
         ],
+        [InlineKeyboardButton("Support", url="https://t.me/COLLEGEWALIMASTI")],
         [
             InlineKeyboardButton(
                 text="↪️ Back", callback_data="open_start_menu"
             ),
-            InlineKeyboardButton(
-                text="🔄 Close", callback_data="close_btn"
-            ),            
-        ],                        
+            InlineKeyboardButton(text="🔄 Close", callback_data="close_btn"),
+        ],
     ]
 )

@@ -11,14 +11,14 @@ from pyrogram.types import InlineKeyboardButton
 
 
 def start_pannel(_):
-    buttons = [
+    return [
         [
             InlineKeyboardButton(
                 text="📚 All Commands", callback_data="settings_back_helper"
             ),
             InlineKeyboardButton(
                 text="Dev", url="https://t.me/saifalisew1508"
-            ),                                   
+            ),
         ],
         [
             InlineKeyboardButton(
@@ -26,19 +26,19 @@ def start_pannel(_):
             ),
             InlineKeyboardButton(
                 text="Support", url="https://t.me/CollegeWaliMasti"
-            ),                       
-        ],        
+            ),
+        ],
         [
             InlineKeyboardButton(
-                text="🔗 Deploy your own bot", url="https://github.com/saifalisew1508/MissCutie"
-            ),                                  
-        ]
+                text="🔗 Deploy your own bot",
+                url="https://github.com/saifalisew1508/MissCutie",
+            ),
+        ],
     ]
-    return buttons
 
 
 def private_panel(_, BOT_USERNAME):
-    buttons = [
+    return [
         [
             InlineKeyboardButton(
                 text="Add me to your group ➕",
@@ -51,20 +51,18 @@ def private_panel(_, BOT_USERNAME):
             ),
         ],
         [
-            InlineKeyboardButton(text="Updates", url=f"https://t.me/MissCutieUpdates"),
             InlineKeyboardButton(
-                text="Support", url=f"https://t.me/CollegeWaliMasti"
+                text="Updates", url="https://t.me/MissCutieUpdates"
+            ),
+            InlineKeyboardButton(
+                text="Support", url="https://t.me/CollegeWaliMasti"
             ),
         ],
+        [InlineKeyboardButton(text="🏳️‍🌈 Language", callback_data="LG")],
         [
             InlineKeyboardButton(
-                    text="🏳️‍🌈 Language", callback_data="LG"
-                )
-        ],
-        [
-            InlineKeyboardButton(
-                text="🔗 Deploy your own bot", url="https://github.com/saifalisew1508/MissCutie"
+                text="🔗 Deploy your own bot",
+                url="https://github.com/saifalisew1508/MissCutie",
             )
-        ]
-     ]
-    return buttons
+        ],
+    ]
