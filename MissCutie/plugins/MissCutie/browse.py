@@ -56,11 +56,9 @@ async def browse_menu(_, query):
 @app.on_callback_query(filters.regex("refbrowse"))
 async def refresh_browse(_, query):
     try:
-        await query.answer(
-                    f"🔄 Refreshed", show_alert=True
-                )
+        await query.answer("🔄 Refreshed", show_alert=True)
         data = query.data.replace("refbrowse","").strip()
-        
+
         category_pl_buttons = getsp_categories_info(data)
         category_pl_buttons.append([
                 InlineKeyboardButton(

@@ -43,14 +43,9 @@ async def helper_private(client: app, update: Union[types.Message, types.Callbac
         language = await get_lang(chat_id)
         _ = get_string(language)
         keyboard = help_pannel(_, True)
-        if update.message.photo:
-            await update.edit_message_text(
-                _["help_1"], reply_markup=keyboard
-            )
-        else:
-            await update.edit_message_text(
-                _["help_1"], reply_markup=keyboard
-            )
+        await update.edit_message_text(
+            _["help_1"], reply_markup=keyboard
+        )
     else:
         chat_id = update.chat.id
         if await is_commanddelete_on(update.chat.id):
@@ -89,11 +84,10 @@ async def helper_cb(client, CallbackQuery, _):
             return await CallbackQuery.answer(
                 "Only for Sudo Users\n\n Fuck Of !!!", show_alert=True
             )
-        else:
-            await CallbackQuery.edit_message_text(
-                helpers.HELP_14, reply_markup=keyboard
-            )
-            return await CallbackQuery.answer()
+        await CallbackQuery.edit_message_text(
+            helpers.HELP_14, reply_markup=keyboard
+        )
+        return await CallbackQuery.answer()
     try:
         await CallbackQuery.answer()
     except:

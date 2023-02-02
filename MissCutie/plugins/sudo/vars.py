@@ -39,37 +39,15 @@ async def varsFunc(client, message):
     play_duration = config.DURATION_LIMIT_MIN
     cm = config.CLEANMODE_DELETE_MINS
     auto_sug = config.AUTO_SUGGESTION_TIME
-    if config.AUTO_LEAVING_ASSISTANT == str(True):
-        ass = "Yes"
-    else:
-        ass = "No"
-    if config.PRIVATE_BOT_MODE == str(True):
-        pvt = "Yes"
-    else:
-        pvt = "No"
-    if config.AUTO_SUGGESTION_MODE == str(True):
-        a_sug = "Yes"
-    else:
-        a_sug = "No"
-    if config.AUTO_DOWNLOADS_CLEAR == str(True):
-        down = "Yes"
-    else:
-        down = "No"
-
-    if not config.GITHUB_REPO:
-        git = "No"
-    else:
-        git = f"[Repo]({config.GITHUB_REPO})"
-    if not config.START_IMG_URL:
-        start = "No"
-    else:
-        start = f"[Image]({config.START_IMG_URL})"
-    s_c = f"[Channel](https://t.me/MissCutieUpdates)"
-    s_g = f"[Group](https://t.me/COLLEGEWALIMASTI)"
-    if not config.GIT_TOKEN:
-        token = "No"
-    else:
-        token = "Yes"
+    ass = "Yes" if config.AUTO_LEAVING_ASSISTANT == str(True) else "No"
+    pvt = "Yes" if config.PRIVATE_BOT_MODE == str(True) else "No"
+    a_sug = "Yes" if config.AUTO_SUGGESTION_MODE == str(True) else "No"
+    down = "Yes" if config.AUTO_DOWNLOADS_CLEAR == str(True) else "No"
+    git = f"[Repo]({config.GITHUB_REPO})" if config.GITHUB_REPO else "No"
+    start = f"[Image]({config.START_IMG_URL})" if config.START_IMG_URL else "No"
+    s_c = "[Channel](https://t.me/MissCutieUpdates)"
+    s_g = "[Group](https://t.me/COLLEGEWALIMASTI)"
+    token = "Yes" if config.GIT_TOKEN else "No"
     if (
         not config.SPOTIFY_CLIENT_ID
         and not config.SPOTIFY_CLIENT_SECRET

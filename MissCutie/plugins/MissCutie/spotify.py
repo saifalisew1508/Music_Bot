@@ -12,8 +12,8 @@ sp = spotipy.Spotify(auth_manager=auth_manager)
 
 def getsp_categories_info(id):
     try: 
-        cinfo = sp.category_playlists(id)        
-        playlists = cinfo["playlists"]["items"]        
+        cinfo = sp.category_playlists(id)
+        playlists = cinfo["playlists"]["items"]
         plist1 = []
         plist3 = []
         pos = 0
@@ -21,161 +21,110 @@ def getsp_categories_info(id):
             pname = item["name"]
             pid = item["id"]
             plist2 = [pname,pid]
-            if len(plist3) == 0:
-                try:
-                    plist3.append(plist2)
-                except:
-                    pass
-            elif len(plist3) == 1:
+            if len(plist3) in {0, 1}:
                 try:
                     plist3.append(plist2)
                 except:
                     pass
             elif len(plist3) == 2:
                 plist1.append(plist3)
-                plist3 = []        
+                plist3 = []
         button1 = []
         for i in plist1:
             try:    
                 button2 = [
-                            InlineKeyboardButton(text=i[0][0], callback_data="psppl" + i[0][1]),
-                            InlineKeyboardButton(text=i[1][0], callback_data="psppl" + i[1][1]),                                   
-                        ]
+                    InlineKeyboardButton(
+                        text=i[0][0], callback_data=f"psppl{i[0][1]}"
+                    ),
+                    InlineKeyboardButton(
+                        text=i[1][0], callback_data=f"psppl{i[1][1]}"
+                    ),
+                ]
                 button1.append(button2)
             except:
                 try:    
-                    button2 = [
-                                InlineKeyboardButton(text=i[0][0], callback_data="psppl" + i[0][1]),                                
-                            ]
+                    button2 = [InlineKeyboardButton(text=i[0][0], callback_data=f"psppl{i[0][1]}")]
                     button1.append(button2)
                 except:
-                    pass        
+                    pass
         return button1
     except Exception as e:
-        print(str(e))
+        print(e)
         return "errrorrr"
 
 def getsp_categories():
-    buttons1 = [   
-            [
-                InlineKeyboardButton(
-                    text="Top Lists", callback_data=f"cat toplists"
-                ),
-                InlineKeyboardButton(
-                    text="Pop", callback_data="cat pop"
-                ),                                   
-            ],
-            [
-                InlineKeyboardButton(
-                    text="EQUAL", callback_data=f"cat equal"
-                ),
-                InlineKeyboardButton(
-                    text="Mood", callback_data="cat mood"
-                ),                                   
-            ],
-            [
-                InlineKeyboardButton(
-                    text="Decades", callback_data=f"cat decades"
-                ),
-                InlineKeyboardButton(
-                    text="Hip-Hop", callback_data="cat hiphop"
-                ),                                   
-            ],
-            [
-                InlineKeyboardButton(
-                    text="In the car", callback_data=f"cat in_the_car"
-                ),
-                InlineKeyboardButton(
-                    text="Gaming", callback_data="cat gaming"
-                ),                                   
-            ],
-            [
-                InlineKeyboardButton(
-                    text="❮", callback_data=f"cat pg3"
-                ),
-                InlineKeyboardButton(
-                    text="Close", callback_data="close_btn"
-                ),
-                InlineKeyboardButton(
-                    text="❯", callback_data="cat pg2"
-                ),                                   
-            ],            
-        ]
-    
-    buttons2 = [            
-            [
-                InlineKeyboardButton(
-                    text="Wellness", callback_data=f"cat wellness"
-                ),
-                InlineKeyboardButton(
-                    text="Workout", callback_data="cat workout"
-                ),                                   
-            ],
-            [
-                InlineKeyboardButton(
-                    text="Chill", callback_data=f"cat chill"
-                ),
-                InlineKeyboardButton(
-                    text="Focus", callback_data="cat focus"
-                ),                                   
-            ],
-            [
-                InlineKeyboardButton(
-                    text="Sleep", callback_data=f"cat sleep"
-                ),
-                InlineKeyboardButton(
-                    text="Party", callback_data="cat party"
-                ),                                   
-            ],                            
-            [
-                InlineKeyboardButton(
-                    text="Indie", callback_data=f"cat indie_alt"
-                ),
-                InlineKeyboardButton(
-                    text="Metal", callback_data="cat metal"
-                ),                                   
-            ],
-            [
-                InlineKeyboardButton(
-                    text="❮", callback_data=f"cat pg1"
-                ),
-                InlineKeyboardButton(
-                    text="Close", callback_data="close_btn"
-                ),
-                InlineKeyboardButton(
-                    text="❯", callback_data="cat pg3"
-                ),                                   
-            ],
-        ]
-    
-    buttons3 = [            
-            [
-                InlineKeyboardButton(
-                    text="Rock", callback_data=f"cat rock"
-                ),
-                InlineKeyboardButton(
-                    text="Dance/Electronic", callback_data="cat edm_dance"
-                ),                                   
-            ],
-            [
-                InlineKeyboardButton(
-                    text="Cooking & Dining", callback_data=f"cat dinner"
-                ),
-                InlineKeyboardButton(
-                    text="Jazz", callback_data="cat jazz"
-                ),                                   
-            ],
-            [
-                InlineKeyboardButton(
-                    text="❮", callback_data=f"cat pg2"
-                ),
-                InlineKeyboardButton(
-                    text="Close", callback_data="close_btn"
-                ),
-                InlineKeyboardButton(
-                    text="❯", callback_data="cat pg1"
-                ),                                   
-            ],
-        ]
-     
+    buttons1 = [
+        [
+            InlineKeyboardButton(
+                text="Top Lists", callback_data="cat toplists"
+            ),
+            InlineKeyboardButton(text="Pop", callback_data="cat pop"),
+        ],
+        [
+            InlineKeyboardButton(text="EQUAL", callback_data="cat equal"),
+            InlineKeyboardButton(text="Mood", callback_data="cat mood"),
+        ],
+        [
+            InlineKeyboardButton(text="Decades", callback_data="cat decades"),
+            InlineKeyboardButton(text="Hip-Hop", callback_data="cat hiphop"),
+        ],
+        [
+            InlineKeyboardButton(
+                text="In the car", callback_data="cat in_the_car"
+            ),
+            InlineKeyboardButton(text="Gaming", callback_data="cat gaming"),
+        ],
+        [
+            InlineKeyboardButton(text="❮", callback_data="cat pg3"),
+            InlineKeyboardButton(text="Close", callback_data="close_btn"),
+            InlineKeyboardButton(text="❯", callback_data="cat pg2"),
+        ],
+    ]
+
+    buttons2 = [
+        [
+            InlineKeyboardButton(
+                text="Wellness", callback_data="cat wellness"
+            ),
+            InlineKeyboardButton(text="Workout", callback_data="cat workout"),
+        ],
+        [
+            InlineKeyboardButton(text="Chill", callback_data="cat chill"),
+            InlineKeyboardButton(text="Focus", callback_data="cat focus"),
+        ],
+        [
+            InlineKeyboardButton(text="Sleep", callback_data="cat sleep"),
+            InlineKeyboardButton(text="Party", callback_data="cat party"),
+        ],
+        [
+            InlineKeyboardButton(text="Indie", callback_data="cat indie_alt"),
+            InlineKeyboardButton(text="Metal", callback_data="cat metal"),
+        ],
+        [
+            InlineKeyboardButton(text="❮", callback_data="cat pg1"),
+            InlineKeyboardButton(text="Close", callback_data="close_btn"),
+            InlineKeyboardButton(text="❯", callback_data="cat pg3"),
+        ],
+    ]
+
+    buttons3 = [
+        [
+            InlineKeyboardButton(text="Rock", callback_data="cat rock"),
+            InlineKeyboardButton(
+                text="Dance/Electronic", callback_data="cat edm_dance"
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="Cooking & Dining", callback_data="cat dinner"
+            ),
+            InlineKeyboardButton(text="Jazz", callback_data="cat jazz"),
+        ],
+        [
+            InlineKeyboardButton(text="❮", callback_data="cat pg2"),
+            InlineKeyboardButton(text="Close", callback_data="close_btn"),
+            InlineKeyboardButton(text="❯", callback_data="cat pg1"),
+        ],
+    ]
+
     return [buttons1,buttons2,buttons3]
